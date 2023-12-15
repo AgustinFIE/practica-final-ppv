@@ -147,7 +147,7 @@ envio4 = Envio(("California", "EstadosUnidos"), ("Miami", "EstadosUnidos"), 5, 1
 print(f"Precio Base: {envio4.precioBase}, Precio Neto: {envio4.calcularPrecioNeto()}")
 
 print("\nPunto 3)\n")
-"""veriguar precio bruto (final) de envío con origen en Buenos Aires, Argentina y con
+"""Averiguar precio bruto (final) de envío con origen en Buenos Aires, Argentina y con
 destino Utrecht, Países Bajos, de 2kg de peso, precio base de $220, con las
 categorías de música, arte y tecnología"""
 
