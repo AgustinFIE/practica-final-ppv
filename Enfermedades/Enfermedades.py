@@ -1,5 +1,6 @@
 from datetime import date, timedelta
 
+
 class Persona():
     def __init__(self, nombre, temperatura, celulas):
         self.nombre = nombre
@@ -10,12 +11,15 @@ class Persona():
     def __str__(self):
         return f"{self.nombre}\n - Temperatura: {self.temperatura}\n - Celulas: {self.celulas}\n"
 
+    def contraerEnfermedad(self, enfermedad):
+        self.enfermedades.append(enfermedad)
+
     def tomarMedicamento(self, cantidadMedicamento):
         for enfermedad in self.enfermedades:
             enfermedad.atenuar(cantidadMedicamento * 15)
 
     def curarPorCompleto(self, dosis):
-        self.temperatura = 36.2     # Vuelve a su temperatura normal
+        self.temperatura = 36.2  # Vuelve a su temperatura normal
         for enfermedad in self.enfermedades:
             while enfermedad.celulasAmenazadas != 0:
                 self.tomarMedicamento(dosis)
@@ -36,6 +40,7 @@ class Persona():
         else:
             return f"{self.nombre} esta enfermo, tiene: {self.estado()}\n"
 
+
 class Enfermedad():
     def __init__(self, nombreEnfermedad, celulasAmenazadas):
         self.nombreEnfermedad = nombreEnfermedad
@@ -49,22 +54,26 @@ class Enfermedad():
         if self.celulasAmenazadas < 0:  # Si las "curo de mas", no pueden ser negativas
             self.celulasAmenazadas = 0
 
-    def estado(self, persona): pass # Lo necesito para la herencia multiple
+    def estado(self, persona): pass  # Lo necesito para la herencia multiple
+
 
 class Infecciosa(Enfermedad):
     def estado(self, persona):
         super(Infecciosa, self).estado(persona)  # Lo necesito para la herencia multiple
-        persona.temperatura += self.celulasAmenazadas/1000
+        persona.temperatura += self.celulasAmenazadas / 1000
         self.celulasAmenazadas = self.celulasAmenazadas * 2
+
 
 class Autoinmune(Enfermedad):
     def estado(self, persona):
-        super(Autoinmune, self).estado(persona)      # Lo necesito para la herencia multiple
-        persona.celulas -= self.celulasAmenazadas/1000
+        super(Autoinmune, self).estado(persona)  # Lo necesito para la herencia multiple
+        persona.celulas -= self.celulasAmenazadas / 1000
+
 
 class InfecciosaYAutoinmune(Infecciosa, Autoinmune):
     def estado(self, persona):
         super(InfecciosaYAutoinmune, self).estado(persona)
+
 
 """
 Lo puedo hacer tambien por composicion, pero fui con herencia multiple
@@ -75,7 +84,6 @@ Tengo que armar una "cadena" de super(), incluyendo la clase Base Enfermedad
 
 https://stackoverflow.com/questions/3810410/python-multiple-inheritance-from-different-paths-with-same-method-name
 """
-
 
 # PRUEBAS
 
@@ -88,12 +96,13 @@ viva un día de su vida para que las enfermedades hagan su efecto.
 """
 
 persona = Persona("Juancito", 36.4, 3000000)  # 3M
-persona.enfermedades.extend([malaria, lupus])
+persona.contraerEnfermedad(malaria)
+persona.contraerEnfermedad(lupus)
 
 # Para practicar date
 
 fechaActual = date.today()
-fechaSiguiente = date.today() + timedelta(days=1)   # Hago que pase un dia, o los que sean necesarios
+fechaSiguiente = date.today() + timedelta(days=1)  # Hago que pase un dia, o los que sean necesarios
 
 print("Punto 1)")
 
@@ -134,6 +143,6 @@ virusX = InfecciosaYAutoinmune("VirusX", 8000)
 persona.enfermedades.append(virusX)
 
 print(persona)
-persona.pasarTiempo(fechaSiguiente - fechaActual) # Sigue siendo 1 dia
+persona.pasarTiempo(fechaSiguiente - fechaActual)  # Sigue siendo 1 dia
 print(persona.mostrarEstado())
 print(persona)

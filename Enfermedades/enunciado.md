@@ -35,3 +35,6 @@ persona está sana.
 haga falta hasta quedar sana.
 4. Modelar una enfermedad que sea tanto infecciosa como autoinmune.
 Nota: se permite escribir con lápiz pero se pide que tenga trazo fuerte y letra legible.
+
+
+![img.png](img.png)
