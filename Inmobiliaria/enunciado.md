@@ -29,3 +29,5 @@ es algo tan directo:
 2. Saber cuál fue el agente que mejor trabaja según el monto total de las comisiones
 que le corresponden por las operaciones.
 3. Realizar una venta y un alquiler.
+
+![img_1.png](img_1.png)
