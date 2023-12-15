@@ -23,3 +23,5 @@ Realizar código para:
 2. Calcular el valor de recaudación total de una máquina.
 3. Encontrar la bebida más cara que puede ofrecer una máquina
 según su configuración.
+
+![img.png](img.png)

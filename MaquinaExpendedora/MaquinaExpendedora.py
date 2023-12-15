@@ -12,9 +12,9 @@ class Water(Beverage):
     def price(self):
         return 50
 
-class Soda(Beverage):
+class Soda(Beverage): # No encontre la manera de heredar de Water, si heredo no puedo declarar la lista de ingredientes
     def __init__(self):
-        super().__init__(['water', 'flavoring', 'gas'])
+        super().__init__(['sugar', 'water', 'carbon dioxide'])
 
     def price(self):
         return Water().price() * 3
@@ -50,3 +50,21 @@ class Machine:
 
 
 
+# Create some beverages
+water = Water()
+soda = Soda()
+cortado = Cortado()
+creamy_coffee_granita = CreamyCoffeeGranita()
+
+# Create a machine with these beverages
+machine = Machine([water, soda, cortado, creamy_coffee_granita])
+
+# Prepare a soda and a creamy coffee granita
+machine.prepare_beverage(soda)
+machine.prepare_beverage(creamy_coffee_granita)
+
+# Print the total revenue of the machine
+print(machine.total_revenue())
+
+# Print the most expensive beverage the machine can offer
+print(type(machine.most_expensive_beverage()).__name__)
