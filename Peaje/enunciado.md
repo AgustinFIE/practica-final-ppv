@@ -21,3 +21,5 @@ los peajes.
 4. Agregar tarifa especial para autos eléctricos (20% de un auto
 común), y otra de $0 para cualquier tipo de vehículo
 gubernamental.
+
+![img.png](img.png)

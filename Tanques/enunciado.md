@@ -21,3 +21,6 @@ azar un proyectil.
 En un futuro se pretende agregar un nuevo tipo de proyectiles que son perforantes con un
 “sabot” descartable (APDS) que penetran blindaje mucho más grueso, y también se va a
 agregar el tanque PzVI Tiger con 100mm de blindaje y que soporta 1100 puntos de daño.
+
+
+![img.png](img.png)

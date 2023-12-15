@@ -29,6 +29,7 @@ class Peaje():
     def mejorCliente(self): # la tengo que hacer con max
         print(max(self.clientes, key=lambda vehiculo: self.totalVehiculo(vehiculo)))
         return 1
+
         # mejorClient = None
         # for vehiculo in self.clientes:
         #     if mejorClient is None or self.totalVehiculo(mejorClient) < self.totalVehiculo(vehiculo):

@@ -162,14 +162,14 @@ user1.like(publ31)
 user2.like(publ31)
 user3.like(publ31) #Auto like (podria ser el caso y deberia ser valido)
 
-user2.like(publ11) # para comparar
+user2.like(publ11) #para comparar
 
 print(redSocial.amigoMasPopular(user1))
 
 print(f"El amigo mas popular de {user1.nombre} es: {redSocial.amigoMasPopular(user1)}") # Lucia con la publicacion 31
 #
 # print("\nPunto 4)\n")
-# """ Permitir que un usuario publique un video que sólo esté accesible para los amigos
+# """ Permitir que un usuario publique un video que solo esté accesible para los amigos
 # de un él"""
 #
 # user4.anadirAmigo(user1)

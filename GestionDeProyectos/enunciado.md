@@ -47,3 +47,5 @@ fecha indicada.
 6. Saber el margen anterior de una tarea, que es la cantidad de días entre que se hace la
 última de las tareas de las que depende, y el día indicado para esa tarea. Si la tarea no
 depende de ninguna, su margen anterior es 0.
+
+![img.png](img.png)
