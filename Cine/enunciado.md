@@ -40,7 +40,6 @@ no está muy apretado (Una persona está muy apretada en la sala si
 la cantidad de personas en la sala es mayor a 100).
 2. Hacer que una persona compre una entrada para una sala. La
 persona comprará la entrada si le conviene, si no le conviene, no se
-03/10/2023 Facultad de Ingeniería del Ejército - Grl Div Manuel N. Savio
 hace nada. Una vez que la persona compró la entrada para una
 sala, se entiende como que ya está ubicada en ella.
 3. Que una sala proyecte una película. Cuando una sala proyecta una
@@ -60,3 +59,5 @@ Cinéfilo.
 6. Agregar un nuevo tipo de películas - las Ultraviolentas. Éstos tiran
 chorros de sangre hacia el público cada 15 minutos, lo que duplica
 el rechazo de una película De Terror.
+
+![img.png](img.png)
