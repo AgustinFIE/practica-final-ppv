@@ -1,7 +1,7 @@
 from datetime import date, timedelta
 
 
-class Persona():
+class Persona:
     def __init__(self, nombre, temperatura, celulas):
         self.nombre = nombre
         self.temperatura = temperatura
